@@ -1,3 +1,33 @@
-<p>
-  items works!
-</p>
+<!--List of items -->
+
+<div *ngIf="items?.length > 0;else noItems"> <!-- noitems = name of the new template  -->
+  <ul *ngFor="let item of items" class="collection">
+    <li class="collection-item">
+      <strong>
+      <h3>{{ item.title}}: </h3>
+    </strong>    
+      {{ item.description}}
+       <hr>
+      {{ item.comment}}
+      <p><strong>&nbsp;Entry Date:  &nbsp;</strong> {{item.itemDate}}
+      </p>
+      </li>
+      <hr>
+      <hr>
+      <li class="collection-item">
+          <strong>
+          <h3>{{ item.title}}: </h3>
+        </strong>    
+          {{ item.description}}
+           <hr>
+          {{ item.comment}}
+          <p><strong>&nbsp;Entry Date:  &nbsp;</strong> {{item.itemDate}}
+          </p>
+          </li>
+  </ul>
+</div>
+
+<ng-template #noItems>
+  <hr>
+  <h5>There are no items to list</h5>
+</ng-template>

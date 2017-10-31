@@ -13,12 +13,16 @@ import { EmployeesComponent } from './components/employees/employees.component';
 
 //Import the Service item
 import {ItemService} from './services/item.service';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { AddItemComponent } from './components/add-item/add-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ItemsComponent,
-    EmployeesComponent
+    EmployeesComponent,
+    NavbarComponent,
+    AddItemComponent
   ],
   imports: [
     BrowserModule,
